@@ -1,0 +1,13 @@
+---
+- hosts: all
+  remote_user: root
+  become: true
+  gather_facts: False
+
+  roles:
+    - common/prepare_system
+
+- hosts: all
+  remote_user: root
+  become: true
+  gather_facts: True
